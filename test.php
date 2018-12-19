@@ -40,7 +40,7 @@ require_once 'connection.php';
             <li><a href="#">Favourites</a><span class="icon"><i class="fa fa-heart"></i></span></li>
             <li><a href="#">Messages</a><span class="icon"><i class="fa fa-envelope"></i></span></li>
           </ul>
-          <div class="text-center"> <span class= "align-text-bottom"> All rights Reserved</span></div>
+          <div class="fixed-bottom text-center"> <span>All Right Reserved &copy ReviewsPanda </span></div>
         </div>
       </nav>
     </div>
