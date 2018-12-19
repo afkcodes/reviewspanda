@@ -1,0 +1,58 @@
+ <ul class="pagination">
+        <li><a href="?pageno=1">First</a></li>
+        <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
+            <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>">Prev</a>
+        </li>
+        <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
+            <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>">Next</a>
+        </li>
+        <li><a href="?pageno=<?php echo $total_pages; ?>">Last</a></li>
+    </ul>
+
+
+
+    <div class="row reviewbox ">
+                  <div class="col-md-4 " style="border:1px solid black;">
+                    <img src="/../admin/'.$row["2"].'" class="revimg img-fluid"/>
+                  </div>
+                  <div class="col-md-8" >
+                    <div>
+                      <a class ="title" href ="article.php?article_id='.base64_encode($row['0']).'"> ' .($row['1']) . ' </a>
+                    </div>
+                    <div class="author">
+                      <small><i class="fas fa-calendar-alt">&nbsp '.($row[5]).'</i> &nbsp by </small>&nbsp
+                      <small><i class="fas fa-user-alt"></i>&nbsp '.($row[4]).'</small> </br>
+                    </div>
+                    
+                    <div class="content">
+                      //'.truncate($row[3], 200).'
+                    </div>
+                  </div>
+                </div>';
+
+
+
+
+
+    <div class="new-wrapper">
+        <div id="main">
+            <div class='wrapper'>
+              <div class='item ryze feature'> <a href="http://www.example.com"></a></div>
+              <div class='item irelia feature'> <a href="http://www.example.com"></a></div>
+              <div class='item jinx feature'></div>
+              <div class='item katarina feature'></div>
+              <div class='item ziggs feature'></div>
+            </div>
+            <div class="row">
+              <div class="col-md-8">
+              </div>
+              <div class="col-md-4">
+                dsadjksdsad
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+
+      
