@@ -35,16 +35,15 @@ else{
               if($countrows = mysqli_num_rows($result) >= 1){
    
                 while ($row = mysqli_fetch_array($result)) {
-               echo '<div class="content hero" style="background-image: url(/../admin/' .($row['2']) . ');" data-type="parallax" data-speed="-2">
+               echo '<div class="content hero img-fluid" style="background-image: url(/../admin/' .($row['2']) . ');" data-type="parallax" data-speed="-2">
                     <div class="content-overlay"></div>
-                      
-                      <div class="content-details fadeIn-bottom">
-                        <h3 class="content-title">This is a title</h3>
-                        <p class="content-text">This is a short description</p>
-                      </div>
-                </div>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="content-title">This is a title</h3>
+                            <p class="content-text">This is a short description</p>
+                        </div>
+                    </div>
                         <div class="body">
-                          <div class="container">' .($row['edarticle']) . '</div>
+                          <div class="container text-justify">' .($row['edarticle']) . '</div>
                       </div>';
                         $hits = $row[6];
                         $hits+=1;
