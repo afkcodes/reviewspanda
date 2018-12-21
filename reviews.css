@@ -16,7 +16,11 @@
 
 }
 .body p {
-  margin-top: 0;
+  margin-top:5px;
+}
+
+.article{
+  margin-top: 2em;
 }
 
 .container-fluid{
@@ -24,6 +28,9 @@ margin: 0;
 padding: 0;
 }
 
+strong{
+  border-bottom: 2px solid white;
+}
 
 
 /*Hover Effect */

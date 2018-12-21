@@ -42,8 +42,17 @@ else{
                             <p class="content-text">This is a short description</p>
                         </div>
                     </div>
-                        <div class="body">
-                          <div class="container text-justify">' .($row['edarticle']) . '</div>
+                      <div class="body">
+                          
+                          <div class="container">
+                                <div class="text-left"> 
+                                    <h3><strong> ' .($row['edtopic']) . '</strong> </h3>
+                                    <small>Reviewed By : ' .($row['Updated_by']) . '</small>
+                                </div>
+                          </div>
+                        <div class="container text-justify article">
+                                '.($row['edarticle']) .'
+                          </div>
                       </div>';
                         $hits = $row[6];
                         $hits+=1;
