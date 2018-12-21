@@ -35,7 +35,7 @@ else{
               if($countrows = mysqli_num_rows($result) >= 1){
    
                 while ($row = mysqli_fetch_array($result)) {
-               echo '<div class="hero" style="background-image: url(/../admin/'.$row["2"].')no-repeat;" data-type="parallax" data-speed="-2"></div>
+               echo '<div class="hero" style="background-image: url(/../admin/' .($row['2']) . ');" data-type="parallax" data-speed="-2"></div>
                         <div class="body">
                           <div class="container">' .($row['edarticle']) . '</div>
                       </div>';
