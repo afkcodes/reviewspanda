@@ -14,6 +14,7 @@ else{
     echo 'Error Occoured Try Again Later !';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +29,8 @@ else{
     
   </head>
   <body>
+
+
     <div class=" container-fluid ">
 
 
@@ -35,10 +38,18 @@ else{
               if($countrows = mysqli_num_rows($result) >= 1){
    
                 while ($row = mysqli_fetch_array($result)) {
-               echo '<div class="hero" style="background-image: url(/../admin/'.$row["2"].')no-repeat;" data-type="parallax" data-speed="-2"></div>
-                        <div class="body">
-                          <div class="container">' .($row['edarticle']) . '</div>
-                      </div>';
+               echo '<div class="section sticky section--s1">
+                          <img src="/../admin/'.$row["2"].'" alt="">
+                    </div>
+                    
+                    <div class="section sticky section--s2">
+                         
+                         <div class="article ">
+
+                             <div class="text-justify">' .($row['edarticle']) . '</div>
+
+                         </div>
+                    </div>';
                         $hits = $row[6];
                         $hits+=1;
                   // echo $hits;
@@ -49,16 +60,17 @@ else{
                   else{
                       echo '<img class ="bg" src="error.jpg" alt="000xxx">';
                   }
-                  ?>     
-
-
-
+                  ?>      
       
     </div>
-    
+
+
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>
+
 </html>

@@ -55,4 +55,43 @@
 
 
 
-      
+           <section style="background-image: url(<?php echo $varable_holding_img_url; ?>);" class="section sticky section--s1">
+      </section>
+
+
+       <div class="text-left"> 
+                             <h3><strong> ' .($row['edtopic']) . '</strong> </h3>
+                             <small><em> Posted By : ' .($row[5]) . ' </em></small>
+                         </div>
+
+
+        .poster,.wrapper{
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.section{
+  color: white;
+  width: 100%;
+
+  z-index: 99;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 9;
+}
+
+.section--s1 {
+  background: #fff;
+  top: 0px;
+  height: 400px;
+}
+.section--s2 {
+ 
+  height: 100vh;
+  background: #666;
+
+}

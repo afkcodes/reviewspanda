@@ -82,7 +82,7 @@ require_once 'connection.php';
               </div>
               <div class="col-md-8 content" >
                 <div>
-                  <a class ="title" href ="article.php?article_id='.base64_encode($row['0']).'"> ' .($row['1']) . ' </a>
+                  <a class ="title" href ="reviews.php?article_id='.base64_encode($row['0']).'"> ' .($row['1']) . ' </a>
                 </div>
                 <div class="author">
                   <small><i class="fas fa-calendar-alt">&nbsp '.($row[5]).'</i> &nbsp by </small>&nbsp
