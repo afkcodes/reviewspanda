@@ -1,13 +1,13 @@
 <?php 
   require_once 'connection.php';
-  if (isset($_GET['article_id'])) {
-    $article_id = base64_decode($_GET['article_id']);
+  if (isset($_GET['movie_id'])) {
+    $edtopic = urldecode(($_GET['movie_id']));
 
 
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
     mysqli_set_charset($conn,"utf8");
     $db_select = mysqli_select_db($conn, $dbname);
-    $result = mysqli_query( $conn,"SELECT * FROM editorial WHERE article_id = $article_id ");
+    $result = mysqli_query( $conn,"SELECT * FROM editorial WHERE edtopic= '$edtopic' ");
 }
 
 else{
@@ -35,11 +35,19 @@ else{
               if($countrows = mysqli_num_rows($result) >= 1){
    
                 while ($row = mysqli_fetch_array($result)) {
-               echo '<div class="content hero img-fluid" style="background-image: url(/../admin/' .($row['2']) . ');" data-type="parallax" data-speed="-2">
+               echo '<div class="content hero img-fluid" style="background-image: url(/../admin/' .($row['file_dest']) . ');" data-type="parallax" data-speed="-2">
                     <div class="content-overlay"></div>
                         <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">This is a title</h3>
-                            <p class="content-text">This is a short description</p>
+                            <h3 class="content-title">' .($row['movname']) . '</h3>
+                            <p class="content-text"> 
+                            <span style="border-bottom: 1px solid white; margin:0.8em;">
+                              Released On : &nbsp; ' .($row['release_d']) . ' &nbsp;
+                             |&nbsp; Directed By : &nbsp; ' .($row['director']) . ' 
+                            </span>
+                            <br>
+                            <span style="border-bottom: 1px solid white; margin-top:0.5em;">Cast :&nbsp ' .($row['starcast']) . '</span>
+
+                            </p>
                         </div>
                     </div>
                       <div class="body">
@@ -54,10 +62,10 @@ else{
                                 '.($row['edarticle']) .'
                           </div>
                       </div>';
-                        $hits = $row[6];
+                        $hits = $row['hits'];
                         $hits+=1;
                   // echo $hits;
-                      mysqli_query($conn,"UPDATE editorial SET hits = $hits WHERE article_id = $article_id");
+                      mysqli_query($conn,"UPDATE editorial SET hits = $hits WHERE edtopic = '$edtopic'");
                        }
 
                   }

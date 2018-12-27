@@ -35,7 +35,7 @@ strong{
 
 /*Hover Effect */
 
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 
 *, *:before, *:after{
   margin: 0;
@@ -88,6 +88,7 @@ strong{
 }
 
 .content-details {
+
   position: absolute;
   text-align: center;
   padding-left: 1em;
@@ -112,7 +113,8 @@ strong{
 
 .content-details h3{
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 2.5em;
   letter-spacing: 0.15em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
@@ -120,7 +122,7 @@ strong{
 
 .content-details p{
   color: #fff;
-  font-size: 0.8em;
+  font-size: 1.5em;
 }
 
 .fadeIn-bottom{
