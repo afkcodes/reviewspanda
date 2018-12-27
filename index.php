@@ -23,9 +23,9 @@ require_once 'connection.php';
         <a href="#" class="logotype">LOGO<span>TYPE</span></a>
         <div class="overflow-container">
           <ul class="menu-dropdown">
-            <li><a href="index.php">Home</a><span class="icon"><i class="fas fa-tachometer-alt"></i></span></li>
+            <li><a href="index.php">Home</a><span class="icon"><i class="fas fa-home"></i></span></li>
             <li class="menu-hasdropdown">
-              <a href="#">Upcoming Reviews</a><span class="icon"><i class="fas fa-cog"></i></span>
+              <a href="#">Upcoming Reviews</a><span class="icon"><i class="fas fa-clock"></i></span>
               <label title="toggle menu" for="settings">
                 <span class="downarrow"><i class="fa fa-caret-down"></i></span>
               </label>
@@ -36,8 +36,8 @@ require_once 'connection.php';
                 <li><a href="">Tv/Web Series</a></li>
               </ul>
             </li>
-            <li><a href="#">Movies News</a><span class="icon disabled"><i class="fa fa-heart"></i></span></li>
-            <li><a href="#">About Me</a><span class="icon"><i class="fa fa-heart"></i></span></li>
+            <li><a href="#">Movies News</a><span class="icon disabled"><i class="fas fa-film"></i></span></li>
+            <li><a href="#">About Me</a><span class="icon"><i class="fas fa-user-circle"></i></i></span></li>
           <div class="fixed-bottom text-center"> <span>All Right Reserved &copy ReviewsPanda </span></div>
         </div>
       </nav>
