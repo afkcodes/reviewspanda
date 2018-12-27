@@ -46,11 +46,22 @@ require_once 'connection.php';
     <div class="new-wrapper container-fluid no-padding">
       <div id="main">
         <div class='wrapper'>
-          <div class='item ryze feature'> <a href="http://www.example.com"></a></div>
-          <div class='item irelia feature'> <a href="http://www.example.com"></a></div>
-          <div class='item jinx feature'></div>
-          <div class='item katarina feature'></div>
-          <div class='item ziggs feature'></div>
+          <?php
+          // This is dynamic posters and the link goes
+                $popular = mysqli_query($conn,"SELECT * FROM editorial ORDER BY article_id DESC LIMIT 5");
+                $cls = ['ryze','irelia','jinx','katarina','ziggs'];
+                $i=0;
+                while ($i<count($cls) && $row = mysqli_fetch_array($popular)){
+               
+                  
+                    echo '<div class="item '.($cls[$i]).' feature" style="background-image: url(/../admin/' .($row['file_dest']) . ');"> <a href ="reviews.php?article_id='.base64_encode($row['0']).'"> ' .($row['edtopic']) . ' "></a></div>';
+                      $i++;
+
+                  }
+                  
+
+                
+                  ?>
         </div>
         <!-- reviews and data -->
         <div class="row">
@@ -78,19 +89,19 @@ require_once 'connection.php';
             echo '
             <div class="row reviewbox ">
               <div class="col-md-4 ">
-                <img src="/../admin/'.$row["2"].'" class="revimg img-fluid"/>
+                <img src="/../admin/'.$row["file_dest"].'" class="revimg img-fluid"/>
               </div>
               <div class="col-md-8 content" >
                 <div>
-                  <a class ="title" href ="reviews.php?article_id='.base64_encode($row['0']).'"> ' .($row['1']) . ' </a>
+                  <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
                 </div>
                 <div class="author">
-                  <small><i class="fas fa-calendar-alt">&nbsp '.($row[5]).'</i> &nbsp by </small>&nbsp
-                  <small><i class="fas fa-user-alt"></i>&nbsp '.($row[4]).'</small> </br>
+                  <small><i class="fas fa-calendar-alt">&nbsp '.($row['updatetime']).'</i> &nbsp by </small>&nbsp
+                  <small><i class="fas fa-user-alt"></i>&nbsp '.($row['Updated_by']).'</small> </br>
                 </div>
                 
                 <div id="fos" class="container-fluid no-padding">
-                  <p class="text-justify ">'.strip_tags(substr("$row[3]", 0, 500)).'</p>
+                  <p class="text-justify ">'.strip_tags(substr("$row[7]", 0, 500)).'</p>
                 </div>
               </div>
             </div>';
@@ -126,10 +137,10 @@ require_once 'connection.php';
                 <div class="fullbox">
                   <div class="row popreviews">
                     <div class="col-md-4 col-sm-2">
-                      <img src="/../admin/'.$row["2"].'" class="popimg img-fluid"/>
+                      <img src="/../admin/'.$row["file_dest"].'" class="popimg img-fluid"/>
                     </div>
                     <div class="col-md-8 col-sm-10 popdata" >
-                      <a href ="article.php?article_id='.base64_encode($row['0']).'"> ' .($row['1']) . ' </a>
+                      <a href ="reviews.php?article_id='.base64_encode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
                     </div>
                   </div> </div>';
                   }
