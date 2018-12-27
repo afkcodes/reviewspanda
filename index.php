@@ -32,11 +32,11 @@ require_once 'connection.php';
               <input type="checkbox" class="sub-menu-checkbox" id="settings" />
               <ul class="sub-menu-dropdown">
                 <li><a href="">Bollywood</a></li>
-                <li><a href="">HOllywood</a></li>
+                <li><a href="">Hollywood</a></li>
                 <li><a href="">Tv/Web Series</a></li>
               </ul>
             </li>
-            <li><a href="#">Movies News</a><span class="icon disabled"><i class="fas fa-film"></i></span></li>
+            <li><a href="#">Movies News (TBR)</a><span class="icon disabled"><i class="fas fa-film"></i></span></li>
             <li><a href="#">About Me</a><span class="icon"><i class="fas fa-user-circle"></i></i></span></li>
           <div class="fixed-bottom text-center"> <span>All Right Reserved &copy ReviewsPanda </span></div>
         </div>
@@ -100,7 +100,7 @@ require_once 'connection.php';
                 </div>
                 
                 <div id="fos" class="container-fluid no-padding">
-                  <p class="text-justify ">'.strip_tags(substr("$row[7]", 0, 500)).'</p>
+                  <p class="text-justify">'.strip_tags(substr("$row[7]", 0, 500)).'</p>
                 </div>
               </div>
             </div>';
@@ -171,6 +171,7 @@ require_once 'connection.php';
                 
                 <div class="col-md-11 sidebar">
                   <h5> Upcoming Releases</h5>
+                  <p class="text-center"> A Lot To Come Here Soon !! <br> Reviewzpanda</p>
                 </div>
               </div>
             </div>
