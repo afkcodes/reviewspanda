@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,300);
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,300);
 .container-fluid {
   height: 100%;
   margin:0;
@@ -36,8 +36,7 @@
   font-weight: 100;
 }
 .container-fluid .wrapper .item.ryze {
-  background-image: url("https://upload.wikimedia.org/wikipedia/en/c/cf/2.0_film_poster.jpg");
-  /*background-size: contain;*/
+
   background-position: 50% center;
 }
 .container-fluid .wrapper .item.ryze:after {
@@ -51,21 +50,19 @@
   /*content: "zero";*/
 }
 .container-fluid .wrapper .item.jinx {
-  background-image: url("https://www.thenews.com.pk//assets/uploads/updates/2018-12-03/401292_4133723_simmba-trailer_updates.jpg");
+  
   background-position: 70% center;
 }
 .container-fluid .wrapper .item.jinx:after {
   /*content: "simmba";*/
 }
 .container-fluid .wrapper .item.katarina {
-  background-image: url("https://cdn.zeebiz.com/sites/default/files/styles/zeebiz_850x478/public/2018/11/23/61020-badhaai-ho.jpg?itok=l9jHtcFt");
-  background-position: 30% center;
+    background-position: 30% center;
 }
 .container-fluid .wrapper .item.katarina:after {
   /*content: "badhai ho";*/
 }
 .container-fluid .wrapper .item.ziggs {
-  background-image: url("https://i0.wp.com/revengeofthefans.com/wp-content/uploads/2018/09/Venom-Poster-2.jpg?ssl=1");
   background-position: 75% center;
 }
 .container-fluid .wrapper .item.ziggs:after {
