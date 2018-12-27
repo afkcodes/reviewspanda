@@ -140,7 +140,7 @@ require_once 'connection.php';
                       <img src="/../admin/'.$row["file_dest"].'" class="popimg img-fluid"/>
                     </div>
                     <div class="col-md-8 col-sm-10 popdata" >
-                      <a href ="reviews.php?article_id='.base64_encode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
+                       <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
                     </div>
                   </div> </div>';
                   }
