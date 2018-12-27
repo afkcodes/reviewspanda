@@ -23,22 +23,21 @@ require_once 'connection.php';
         <a href="#" class="logotype">LOGO<span>TYPE</span></a>
         <div class="overflow-container">
           <ul class="menu-dropdown">
-            <li><a href="#">Dashboard</a><span class="icon"><i class="fas fa-tachometer-alt"></i></span></li>
+            <li><a href="index.php">Home</a><span class="icon"><i class="fas fa-tachometer-alt"></i></span></li>
             <li class="menu-hasdropdown">
-              <a href="#">Settings</a><span class="icon"><i class="fas fa-cog"></i></span>
+              <a href="#">Upcoming Reviews</a><span class="icon"><i class="fas fa-cog"></i></span>
               <label title="toggle menu" for="settings">
                 <span class="downarrow"><i class="fa fa-caret-down"></i></span>
               </label>
               <input type="checkbox" class="sub-menu-checkbox" id="settings" />
               <ul class="sub-menu-dropdown">
-                <li><a href="">Profile</a></li>
-                <li><a href="">Security</a></li>
-                <li><a href="">Account</a></li>
+                <li><a href="">Bollywood</a></li>
+                <li><a href="">HOllywood</a></li>
+                <li><a href="">Tv/Web Series</a></li>
               </ul>
             </li>
-            <li><a href="#">Favourites</a><span class="icon"><i class="fa fa-heart"></i></span></li>
-            <li><a href="#">Messages</a><span class="icon"><i class="fa fa-envelope"></i></span></li>
-          </ul>
+            <li><a href="#">Movies News</a><span class="icon disabled"><i class="fa fa-heart"></i></span></li>
+            <li><a href="#">About Me</a><span class="icon"><i class="fa fa-heart"></i></span></li>
           <div class="fixed-bottom text-center"> <span>All Right Reserved &copy ReviewsPanda </span></div>
         </div>
       </nav>
@@ -140,7 +139,7 @@ require_once 'connection.php';
                       <img src="/../admin/'.$row["file_dest"].'" class="popimg img-fluid"/>
                     </div>
                     <div class="col-md-8 col-sm-10 popdata" >
-                      <a href ="reviews.php?article_id='.base64_encode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
+                       <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
                     </div>
                   </div> </div>';
                   }
