@@ -1,4 +1,5 @@
 <?php
+      ob_start();
         session_start();
         require_once  'connection.php';
         // ---------------------------Signup Starts Here-----------------------------
@@ -66,7 +67,7 @@
 
             }
 
-            elseif (strlen($password)<=8){   
+            elseif (strlen($password)<8){   
                 $ins = False;
                 $emsg ='Password Should be of minimum 8 characters.';
                 echo "<script type='text/javascript'>alert('$emsg');</script>";
@@ -79,7 +80,7 @@
 
             $stmt= $pdo->prepare($sql);
             $stmt->execute([$uname,$name,$email,$epassword,$mobile,$time]);
-            header('location: login.php?signup=sucess');
+            header('location: index.php?signup=sucess');
             }
 
             elseif($ins==False){

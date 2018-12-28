@@ -1,4 +1,5 @@
 <?php
+ob_start();
 require_once 'connection.php';
 ?>
 <!DOCTYPE html>
@@ -38,7 +39,7 @@ require_once 'connection.php';
             </li>
             <li><a href="#">Movies News (TBR)</a><span class="icon disabled"><i class="fas fa-film"></i></span></li>
             <li><a href="#">About Me</a><span class="icon"><i class="fas fa-user-circle"></i></i></span></li>
-          <div class="fixed-bottom text-center"> <span>All Right Reserved &copy ReviewsPanda </span></div>
+          <div class="fixed-bottom text-center"> <span class="ftext">All Right Reserved &copy ReviewsPanda</span></div>
         </div>
       </nav>
     </div>

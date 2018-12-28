@@ -215,6 +215,9 @@ body {
   color: black;
 }
 
+.ftext{
+  font-weight: bold;
+}
 
 
 .menu label {

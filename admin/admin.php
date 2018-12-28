@@ -51,7 +51,7 @@ else {
 		<!--------------------------------NAVIGATION BAR ENDS------------------------------------>
 		<div class="container content">
 			<h3 class="text-center "> <strong> <em>ReviewsPanda Admin</em> </strong> </h3>
-			<div class="text-right"><a class="btn btn-danger" href="index.php" >Logout</a></div>
+			<div class="text-right"><a class="btn btn-danger" href="logout.php" >Logout</a></div>
 			<div class="row">
 				<div class="col-md-2 admin-menu">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
