@@ -7,7 +7,7 @@ require_once 'connection.php';
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ReviewsPanda</title>
+    <title>ReviewsPanda | Reviews Redefined</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -21,7 +21,7 @@ require_once 'connection.php';
       <span class="screen-reader-text">Menu</span>
       </button>
       <nav role="navigation" class="menu">
-        <a href="#" class="logotype">LOGO<span>TYPE</span></a>
+        <a href="index.html" class="logotype"><img src="revp.png" alt=""></a>
         <div class="overflow-container">
           <ul class="menu-dropdown">
             <li><a href="index.php">Home</a><span class="icon"><i class="fas fa-home"></i></span></li>

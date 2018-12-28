@@ -186,7 +186,7 @@
                                 </div>
                                 <br>
                                 <div class="text-center">
-                                    <button type="submit" class="btn login-btn btn-outline-primary">Login</button>
+                                    <button type="submit" class="btn login-btn btn-outline-primary ">Login</button>
                                 </div>
                             </form>
                         </div>
@@ -197,31 +197,31 @@
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Username</label>
                                     <input type="text" class="form-control rounded-0" name="uname"  aria-describedby="unameHelp" placeholder="Enter Username"  
-                                    value="<?php echo isset($_POST["uname"]) ? htmlentities($_POST["uname"]) : ''; ?>" >
+                                    value="<?php echo isset($_POST["uname"]) ? htmlentities($_POST["uname"]) : ''; ?>" readonly>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Name</label>
                                     <input type="text" class="form-control rounded-0" name="name" aria-describedby="NameHelp" placeholder="Enter Name" required 
-                                    value="<?php echo isset($_POST["name"]) ? htmlentities($_POST["name"]) : ''; ?>" >
+                                    value="<?php echo isset($_POST["name"]) ? htmlentities($_POST["name"]) : ''; ?>" readonly >
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
                                     <input type="email" class="form-control rounded-0" name="email" aria-describedby="emailHelp" placeholder="Enter email" required
-                                    value="<?php echo isset($_POST["email"]) ? htmlentities($_POST["email"]) : ''; ?>" >
+                                    value="<?php echo isset($_POST["email"]) ? htmlentities($_POST["email"]) : ''; ?>" readonly >
                                     
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Password</label>
-                                    <input type="password" class="form-control rounded-0" name="password" placeholder="Password" required >
+                                    <input type="password" class="form-control rounded-0 " name="password" placeholder="Password" required readonly >
                                     <small id="emailHelp" class="form-text ">Your Credentials are safe with us. </small>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputphone">Mobile No.</label>
-                                    <input type="number" class="form-control rounded-0" name="mobile" aria-describedby="NumberHelp" placeholder="Enter Mobile No." required 
-                                    value="<?php echo isset($_POST["mobile"]) ? htmlentities($_POST["mobile"]) : ''; ?>" >
+                                    <input type="number" class="form-control rounded-0 disabled" name="mobile" aria-describedby="NumberHelp" placeholder="Enter Mobile No." required 
+                                    value="<?php echo isset($_POST["mobile"]) ? htmlentities($_POST["mobile"]) : ''; ?>" readonly >
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn signup-btn btn-outline-primary">Signup</button>
+                                    <!-- <button type="submit" class="btn signup-btn btn-outline-primary">Signup</button> -->
                                 </div>
                             </form>
                         </div>
