@@ -1,6 +1,7 @@
 <?php
+ob_start();
 session_start();
-require("../connect.php");
+require("connection.php");
 // echo("{$_SESSION['u_name']}"."<br />");
 	if (isset($_POST['submit'])) {
 $movname= $_POST['movie'];
@@ -35,7 +36,7 @@ else {
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Beyond-Prep | Go Beyond Preparation</title>
+		<title>ReviewzPanda | Admin </title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -50,6 +51,7 @@ else {
 		<!--------------------------------NAVIGATION BAR ENDS------------------------------------>
 		<div class="container content">
 			<h3 class="text-center "> <strong> <em>ReviewsPanda Admin</em> </strong> </h3>
+			<div class="text-right"><a class="btn btn-danger" href="index.php" >Logout</a></div>
 			<div class="row">
 				<div class="col-md-2 admin-menu">
 					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">

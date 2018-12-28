@@ -53,7 +53,7 @@ require_once 'connection.php';
                 while ($i<count($cls) && $row = mysqli_fetch_array($popular)){
                
                   
-                    echo '<div class="item '.($cls[$i]).' feature" style="background-image: url(/../admin/' .($row['file_dest']) . ');"> <a href ="reviews.php?article_id='.base64_encode($row['0']).'"> ' .($row['edtopic']) . ' "></a></div>';
+                    echo '<div class="item '.($cls[$i]).' feature" style="background-image: url(/../admin/' .($row['file_dest']) . ');"> <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a></div>';
                       $i++;
 
                   }
