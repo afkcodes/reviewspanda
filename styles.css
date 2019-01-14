@@ -217,6 +217,10 @@ body {
 
 .ftext{
   font-weight: bold;
+  position: absolute;
+  text-align: center;
+  bottom: 0px;
+  color: white;
 }
 
 
@@ -808,4 +812,30 @@ h5:after {
   border-bottom: 3px solid #446CB3;
   margin-bottom: -3px;
   max-width: 130px;
+}
+
+/*SOCIAL SIDEBAR*/
+.nav-tabs .nav-link {
+    border: 1px solid transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+#nav-tab a{
+  font-weight: bold;
+  color: #252525;
+}
+#nav-home-tab.active{
+  background-color: #4267B2;
+  font-weight: bold;
+  color: white;
+}
+
+#nav-profile-tab.active{
+  background-color: #1DA1F2;
+  font-weight: bold;
+  color: white;
 }
