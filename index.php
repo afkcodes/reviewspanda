@@ -56,7 +56,7 @@ require_once 'connection.php';
             </li>
             <li><a href="#">Movies News (TBR)</a><span class="icon disabled"><i class="fas fa-film"></i></span></li>
             <li><a href="#">About Me</a><span class="icon"><i class="fas fa-user-circle"></i></i></span></li>
-            <span class="ftext ">All Right Reserved ReviewzPanda</span>
+            <div class="fixed-bottom text-center"> <span class="ftext">All Right Reserved &copy ReviewzPanda</span></div>
           </div>
         </nav>
       </div>
@@ -165,30 +165,27 @@ require_once 'connection.php';
                   
                   <div class="col-md-11 sidebar ">
                     <h5>We Are Social</h5>
-                    <nav>
-                      <div class="nav nav-tabs tabs-justified" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Facebook</a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Twitter</a>
-                        <a class="nav-item nav-link" href="https://www.instagram.com/reviewzpanda" role="tab" >Instagram</a>
-                      </div>
-                    </nav>
-                    <div class="tab-content" id="nav-tabContent">
-                      <div class="tab-pane fade show active" id="nav-home" 
-                      role="tabpanel" aria-labelledby="nav-home-tab">
-
-                          <div class="fb-page" data-href="https://www.facebook.com/reviewzpanda/" data-tabs="timeline" data-width="470" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/reviewzpanda/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/reviewzpanda/">Reviewzpanda</a></blockquote></div>
-                          </div>
-
-                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                          <a class="twitter-timeline" data-width="462" data-height="522" href="https://twitter.com/reviewzpanda?ref_src=twsrc%5Etfw">Tweets by reviewzpanda</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-                      </div>
-
-                      <!-- <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                          
-
-                      </div> -->
+                    <button class="icon-btn facebook">
+                    <a class="link" href="https://www.facebook.com/">
+                      <i class="fab fa-facebook-f "></i>
+                    </a>
+                  </button>
+                    <button class="icon-btn instagram">
+                    <a class="link" href="https://www.instagram.com/">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </button>
+                    <button class="icon-btn twitter">
+                    <a class="link" href="https://twitter.com/">
+                      <i class="fab fa-twitter "></i>
+                    </a>
+                    </button>
+                    <button class="icon-btn google-plus">
+                    <a class="link" href="https://plus.google.com/">
+                      <i class="fab fa-google-plus-g "></i>
+                    </a>
                     </div>
-                    
+                    </button>
                   </div>
                   
                   <div class="col-md-11 sidebar">
