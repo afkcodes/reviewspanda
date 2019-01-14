@@ -8,12 +8,12 @@ require_once 'connection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="title" content="Xamscoop - Prepare, Gate, CAT, SSC, Placement, Banking, Railway " />
+    <meta name="title" content="ReviewzPanda - Movie Reviews, Redfined Honest Reviews & Ratings " />
     <meta name="keywords" content=" reviewzpanda, imdb, ratings, movie reviews, movie ratings, rottentomatoes, bollywood movies reviews, public reviews,youtube, avengers, movie analysis,box office collections,movies 2019, movies rating website,web series,tv series, panda, indian movies, hindi movies" />
     <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
-    <title>ReviewsPanda | Reviews Redefined</title>
+    <title>ReviewzPanda | Reviews Redefined</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
@@ -45,7 +45,7 @@ require_once 'connection.php';
             </li>
             <li><a href="#">Movies News (TBR)</a><span class="icon disabled"><i class="fas fa-film"></i></span></li>
             <li><a href="#">About Me</a><span class="icon"><i class="fas fa-user-circle"></i></i></span></li>
-            <div class="fixed-bottom text-center"> <span class="ftext">All Right Reserved &copy ReviewsPanda</span></div>
+            <div class="fixed-bottom text-center"> <span class="ftext">All Right Reserved &copy ReviewzPanda</span></div>
           </div>
         </nav>
       </div>
@@ -60,7 +60,7 @@ require_once 'connection.php';
             while ($i<count($cls) && $row = mysqli_fetch_array($popular)){
             
             
-            echo '<div class="item '.($cls[$i]).' feature" style="background-image: url(/../admin/' .($row['file_dest']) . ');"> <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a></div>';
+            echo '<div class="item '.($cls[$i]).' feature" style="background-image: url(admin/' .($row['file_dest']) . ');"> <a class ="title" href ="reviews.php?movie_id='.rawurlencode($row['movname']).'"> ' .($row['edtopic']) . ' </a></div>';
             $i++;
             }
             
@@ -93,11 +93,11 @@ require_once 'connection.php';
               echo '
               <div class="row reviewbox ">
                 <div class="col-md-4 ">
-                  <img src="/../admin/'.$row["file_dest"].'" class="revimg img-fluid"/>
+                  <img src="admin/'.$row["file_dest"].'" class="revimg img-fluid"/>
                 </div>
                 <div class="col-md-8 content" >
                   <div>
-                    <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
+                    <a class ="title" href ="reviews.php?movie_id='.rawurlencode($row['movname']).'"> ' .($row['edtopic']) . ' </a>
                   </div>
                   <div class="author">
                     <small><i class="fas fa-calendar-alt">&nbsp '.($row['updatetime']).'</i> &nbsp by </small>&nbsp
@@ -141,10 +141,10 @@ require_once 'connection.php';
                   <div class="fullbox">
                     <div class="row popreviews">
                       <div class="col-md-4 col-sm-2">
-                        <img src="/../admin/'.$row["file_dest"].'" class="popimg img-fluid"/>
+                        <img src="admin/'.$row["file_dest"].'" class="popimg img-fluid"/>
                       </div>
                       <div class="col-md-8 col-sm-10 popdata" >
-                        <a class ="title" href ="reviews.php?movie_id='.urlencode($row['edtopic']).'"> ' .($row['edtopic']) . ' </a>
+                        <a class ="title" href ="reviews.php?movie_id='.rawurlencode($row['movname']).'"> ' .($row['edtopic']) . ' </a>
                       </div>
                     </div> </div>';
                     }
@@ -153,17 +153,17 @@ require_once 'connection.php';
                   </div>
                   
                   <div class="col-md-11 sidebar ">
-                    <h5> Follow Me On</h5>
+                    <h5>We Are Social</h5>
                     <button class="icon-btn facebook">
-                    <a class="link" href="https://www.facebook.com/" target="_blank">
+                    <a class="link" href="https://www.facebook.com/reviewzpanda" target="_blank">
                       <i class="fab fa-facebook-f "></i>
                     </a>
                     <button class="icon-btn instagram">
-                    <a class="link" href="https://www.instagram.com/"  target="_blank">
+                    <a class="link" href="https://www.instagram.com/reviewzpanda"  target="_blank">
                       <i class="fab fa-instagram"></i>
                     </a>
                     <button class="icon-btn twitter">
-                    <a class="link" href="https://twitter.com/" target="_blank">
+                    <a class="link" href="https://twitter.com/reviewzpanda" target="_blank">
                       <i class="fab fa-twitter "></i>
                     </a>
                     

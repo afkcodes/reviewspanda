@@ -40,9 +40,9 @@ else {
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" media="screen" href="/admin/css/adminstyle.css" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/adminstyle.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="/resources/ckeditor/ckeditor.js"></script>
+		<script src="resources/ckeditor/ckeditor.js"></script>
 		<script src="/js/script.js"></script>
 	</head>
 	<body>
@@ -64,7 +64,7 @@ else {
 				<div class="col-md-10 edit-content ">
 					<div class="tab-content" id="v-pills-tabContent">
 						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-							<form action="ext.php" method="POST" enctype="multipart/form-data">
+							<form action="admin.php" method="POST" enctype="multipart/form-data">
 								<div class="form-group">
 									<label for="exampleFormControlInput1">Movie Name</label>
 									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Movie Name" name="movie" required>

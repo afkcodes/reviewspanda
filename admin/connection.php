@@ -1,9 +1,9 @@
  <?php
 	
 	$host = 'localhost';
-	$db   = 'id7713455_feature_data';
-	$user = 'id7713455_feature';
-	$pass = '12345678';
+	$db   = 'u737249528_revpa';
+	$user = 'ashish';
+	$pass = 'djmaza.com';
 	$charset = 'utf8mb4';
 	$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
 	$options = [

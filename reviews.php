@@ -1,13 +1,13 @@
 <?php 
   require_once 'connection.php';
   if (isset($_GET['movie_id'])) {
-    $edtopic = urldecode(($_GET['movie_id']));
+    $movname = rawurldecode(($_GET['movie_id']));
 
 
     $conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
     mysqli_set_charset($conn,"utf8");
     $db_select = mysqli_select_db($conn, $dbname);
-    $result = mysqli_query( $conn,"SELECT * FROM editorial WHERE edtopic= '$edtopic' ");
+    $result = mysqli_query( $conn,"SELECT * FROM editorial WHERE movname= '$movname' ");
 }
 
 else{
@@ -35,7 +35,7 @@ else{
               if($countrows = mysqli_num_rows($result) >= 1){
    
                 while ($row = mysqli_fetch_array($result)) {
-               echo '<div class="content hero img-fluid" style="background-image: url(/../admin/' .($row['file_dest']) . ');" data-type="parallax" data-speed="-2">
+               echo '<div class="content hero img-fluid" style="background-image: url(admin/' .($row['file_dest']) . ');" data-type="parallax" data-speed="-2">
                     <div class="content-overlay"></div>
                         <div class="content-details fadeIn-bottom">
                             <h3 class="content-title">' .($row['movname']) . '</h3>
@@ -65,12 +65,12 @@ else{
                         $hits = $row['hits'];
                         $hits+=1;
                   // echo $hits;
-                      mysqli_query($conn,"UPDATE editorial SET hits = $hits WHERE edtopic = '$edtopic'");
+                      mysqli_query($conn,"UPDATE editorial SET hits = $hits WHERE movname = '$movname'");
                        }
 
                   }
                   else{
-                      echo '<img class ="bg" src="error.jpg" alt="000xxx">';
+                      echo '<img class ="bg img-fluid" src="error.jpg" alt="000xxx">';
                   }
                   ?>     
 
