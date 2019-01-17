@@ -86,10 +86,19 @@ else {
 									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Keep it Cool" name="edtopic" required>
 								</div>
 								<div class="custom-file">
-									<label class="custom-file-label" for="customFile">Choose Poster</label>
-									<input type="file" class="custom-file-input" id="customFile" name="image" >
+									
+									<input type="file" class="custom-file-input" id="inputFile" name="image"/>
+									<label class="custom-file-label" for="inputFile">Choose Poster</label>
 									
 								</div>
+								<script>
+						            $('#inputFile').on('change',function(){
+						                //get the file name
+						                var fileName = $(this).val();
+						                //replace the "Choose a file" label
+						                $(this).next('.custom-file-label').html(fileName);
+						            })
+						        </script>
 
 								<div class="form-group">
 									<label for="exampleFormControlTextarea1">Review</label>

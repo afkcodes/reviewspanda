@@ -165,17 +165,17 @@ require_once 'connection.php';
                   
                   <div class="col-md-11 sidebar ">
                     <h5>We Are Social</h5>
-                    <button class="icon-btn facebook">
+                    <button onclick="location.href='https://www.facebook.com/reviewzpanda'" class="icon-btn facebook">
                     <a class="link" href="https://www.facebook.com/">
                       <i class="fab fa-facebook-f "></i>
                     </a>
                   </button>
-                    <button class="icon-btn instagram">
+                    <button onclick="location.href='https://www.instagram.com/reviewzpanda'" class="icon-btn instagram">
                     <a class="link" href="https://www.instagram.com/">
                       <i class="fab fa-instagram"></i>
                     </a>
                   </button>
-                    <button class="icon-btn twitter">
+                    <button onclick="location.href='https://www.twitter.com/reviewzpanda'" class="icon-btn twitter">
                     <a class="link" href="https://twitter.com/">
                       <i class="fab fa-twitter "></i>
                     </a>

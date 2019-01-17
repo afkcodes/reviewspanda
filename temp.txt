@@ -1,0 +1,22 @@
+<button class="icon-btn facebook">
+                    <a class="link" href="https://www.facebook.com/">
+                      <i class="fab fa-facebook-f "></i>
+                    </a>
+                    </button>
+                    <button class="icon-btn instagram">
+                    <a class="link" href="https://www.instagram.com/">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    </button>
+                    <button class="icon-btn twitter">
+                    <a class="link" href="https://twitter.com/">
+                      <i class="fab fa-twitter "></i>
+                    </a>
+                    </button>
+                    <button class="icon-btn google-plus">
+                    <a class="link" href="https://plus.google.com/">
+                      <i class="fab fa-google-plus-g "></i>
+                    </a>
+                  </div>
+                  </button>
+
