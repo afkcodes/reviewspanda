@@ -11,6 +11,7 @@ require_once 'connection.php';
     <meta name="title" content="ReviewzPanda - Movie Reviews, Redfined Honest Reviews & Ratings " />
     <meta name="keywords" content=" reviewzpanda, imdb, ratings, movie reviews, movie ratings, rottentomatoes, bollywood movies reviews, public reviews,youtube, avengers, movie analysis,box office collections,movies 2019, movies rating website,web series,tv series, panda, indian movies, hindi movies" />
     <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />
+    <meta name="google-site-verification" content="dd2pFGUek6PowgIn4VaRLfOjo5NxfUdfKz-ZD110DEk" />
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
     <title>ReviewzPanda | Reviews Redefined</title>
@@ -19,20 +20,17 @@ require_once 'connection.php';
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Antic|Jura|Khand|Rajdhani" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749076-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-132749076-1');
+        </script>
   </head>
   <body>
-    <!-- FACEBOOK PLUGIN JAVASCRIPT JAVA SDK -->
-    <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=2097243960506608&autoLogAppEvents=1';
-                fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-      </script>
-  <!-- FACEBOOK PLUGIN JAVA SDK END -->
     <div class="primary-nav">
       <button href="#" class="hamburger open-panel nav-toggle">
       <span class="screen-reader-text">Menu</span>
