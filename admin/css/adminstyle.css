@@ -66,6 +66,9 @@ width: 100%;
 	color: black;
 }
 
-.custom-file-input ~ .custom-file-label::after {
-    content: "Button Text";
+.btn-secondary.active {
+    background-color: #d34848 !important;
+}
+.btn-secondary{
+	background-color: #33313b !important;
 }

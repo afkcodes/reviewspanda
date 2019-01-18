@@ -8,7 +8,8 @@ $movname= $_POST['movie'];
 $release_d= $_POST['release'];
 $director= $_POST['director'];
 $starcast= $_POST['starcast'];
-
+$gtags=	$_POST['gtags'];
+$type=	$_POST['revtype'];
 $topic= $_POST['edtopic'];
 $content = $_POST['content'];
 $postedby= $_POST['admin'];
@@ -19,9 +20,9 @@ $file_dest = 'uploads/'.$imgname;
 move_uploaded_file($temp_dest, $file_dest);
 date_default_timezone_set("Asia/Calcutta");
 $time = date("d-M-y");
-$sql = "INSERT INTO  editorial (movname,release_d,director,starcast,edtopic,file_dest,edarticle,updated_by,updatetime) VALUES (?,?,?,?,?,?,?,?,?)";
+$sql = "INSERT INTO  editorial (movname,release_d,director,starcast,edtopic,file_dest,edarticle,updated_by,updatetime,revtype,gtags) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
 $stmt= $pdo->prepare($sql);
-$x = $stmt->execute([$movname,$release_d,$director,$starcast,$topic,$file_dest,$content,$postedby,$time]);
+$x = $stmt->execute([$movname,$release_d,$director,$starcast,$topic,$file_dest,$content,$postedby,$time,$type,$gtags]);
 if ($x) {
 	echo 'Posted';
 	header( 'Location:admin.php?post_successful');
@@ -42,7 +43,7 @@ else {
 		<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" media="screen" href="css/adminstyle.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="resources/ckeditor/ckeditor.js"></script>
+		<script src="/resources/ckeditor/ckeditor.js"></script>
 		<script src="/js/script.js"></script>
 	</head>
 	<body>
@@ -92,14 +93,13 @@ else {
 									
 								</div>
 								<script>
-						            $('#inputFile').on('change',function(){
-						                //get the file name
-						                var fileName = $(this).val();
-						                //replace the "Choose a file" label
-						                $(this).next('.custom-file-label').html(fileName);
-						            })
-						        </script>
-
+								$('#inputFile').on('change',function(){
+								//get the file name
+								var fileName = $(this).val();
+								//replace the "Choose a file" label
+								$(this).next('.custom-file-label').html(fileName);
+								})
+								</script>
 								<div class="form-group">
 									<label for="exampleFormControlTextarea1">Review</label>
 									<textarea class="ckeditor form-control " id="editor" row='8' name="content" ></textarea>
@@ -116,8 +116,22 @@ else {
 									</script>
 								</div>
 								<div class="form-group">
+									<label for="exampleFormControlTextarea1">Google tags</label>
+									<textarea class="form-control" row='5' name="gtags"></textarea>
+								</div>
+								<div class="form-group">
 									<label for="exampleFormControlInput1">Reviewed By</label>
 									<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Added by" name="admin" required>
+								</div>
+								<!-- selector for no spoiler and full review -->
+								<div><p>Is it a ?</p></div>
+								<div class="btn-group btn-group-toggle" data-toggle="buttons">
+									<label class="btn btn-secondary active"> 
+										<input type="radio" name="revtype" value="full"> Full Review.
+									</label>
+									<label class="btn btn-secondary">
+										<input type="radio" name="revtype"  value="nospoiler"> No Spoiler !
+									</label>
 								</div>
 								<div class="text-center">
 									<button type="submit" class="btn btn-success btn-post" name='submit'>Post This</button>
