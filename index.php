@@ -146,7 +146,7 @@ require_once 'connection.php';
                 <div class="col-md-11 sidebar popular">
                   <h5> Popular Reviews</h5>
                   <?php
-                  $popular = mysqli_query($conn,"SELECT * FROM editorial ORDER BY hits DESC LIMIT 5");
+                  $popular = mysqli_query($conn,"SELECT file_dest,edtopic,movname FROM editorial ORDER BY hits DESC LIMIT 5");
                   while ($row = mysqli_fetch_array($popular)) {
                   echo '
                   <div class="fullbox">

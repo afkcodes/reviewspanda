@@ -1,17 +1,14 @@
-<?php 
-  require_once 'connection.php';
-  if (isset($_GET['movie_id'])) {
-    $movname = rawurldecode(($_GET['movie_id']));
-
-
-    $conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
-    mysqli_set_charset($conn,"utf8");
-    $db_select = mysqli_select_db($conn, $dbname);
-    $result = mysqli_query( $conn,"SELECT * FROM editorial WHERE movname= '$movname' ");
+<?php
+require_once 'connection.php';
+if (isset($_GET['movie_id'])) {
+$movname = rawurldecode(($_GET['movie_id']));
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
+mysqli_set_charset($conn,"utf8");
+$db_select = mysqli_select_db($conn, $dbname);
+$result = mysqli_query( $conn,"SELECT * FROM editorial WHERE movname= '$movname'");
 }
-
 else{
-    echo 'Error Occoured Try Again Later !';
+echo 'Error Occoured Try Again Later !';
 }
 ?>
 <!DOCTYPE html>
@@ -19,7 +16,14 @@ else{
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>ReviewsPanda</title>
+        <?php 
+              $meta = mysqli_query( $conn,"SELECT edtopic,gtags FROM editorial WHERE movname= '$movname'");
+              while ($etags = mysqli_fetch_array($meta)) {   
+                         echo '<title>'.($etags['edtopic']).'</title>
+                               <meta name="keywords" content=" '.($etags['gtags']).'" />
+                               <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />' 
+                         ;}
+     ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="reviews.css">
@@ -29,53 +33,46 @@ else{
   </head>
   <body>
     <div class=" container-fluid ">
-
-
-      <?php 
-              if($countrows = mysqli_num_rows($result) >= 1){
-   
-                while ($row = mysqli_fetch_array($result)) {
-               echo '<div class="content hero img-fluid" style="background-image: url(admin/' .($row['file_dest']) . ');" data-type="parallax" data-speed="-2">
-                    <div class="content-overlay"></div>
-                        <div class="content-details fadeIn-bottom">
-                            <h3 class="content-title">' .($row['movname']) . '</h3>
-                            <p class="content-text"> 
-                            <span style="border-bottom: 1px solid white; margin:0.8em;">
-                              Released On : &nbsp; ' .($row['release_d']) . ' &nbsp;
-                             |&nbsp; Directed By : &nbsp; ' .($row['director']) . ' 
-                            </span>
-                            <br>
-                            <span style="border-bottom: 1px solid white; margin-top:0.5em;">Cast :&nbsp ' .($row['starcast']) . '</span>
-
-                            </p>
-                        </div>
-                    </div>
-                      <div class="body">
-                          
-                          <div class="container">
-                                <div class="text-left"> 
-                                    <h3><strong> ' .($row['edtopic']) . '</strong> </h3>
-                                    <small>Reviewed By : ' .($row['Updated_by']) . '</small>
-                                </div>
-                          </div>
-                        <div class="container text-justify article">
-                                '.($row['edarticle']) .'
-                          </div>
-                      </div>';
-                        $hits = $row['hits'];
-                        $hits+=1;
-                  // echo $hits;
-                      mysqli_query($conn,"UPDATE editorial SET hits = $hits WHERE movname = '$movname'");
-                       }
-
-                  }
-                  else{
-                      echo '<img class ="bg img-fluid" src="error.jpg" alt="000xxx">';
-                  }
-                  ?>     
-
-
-
+      <?php
+      if($countrows = mysqli_num_rows($result) >= 1){
+      
+      while ($row = mysqli_fetch_array($result)) {
+      echo '<div class="content hero img-fluid" style="background-image: url(admin/' .($row['file_dest']) . ');" data-type="parallax" data-speed="-2">
+        <div class="content-overlay"></div>
+        <div class="content-details fadeIn-bottom">
+          <h3 class="content-title">' .($row['movname']) . '</h3>
+          <p class="content-text">
+            <span style="border-bottom: 1px solid white; margin:0.8em;">
+              Released On : &nbsp; ' .($row['release_d']) . ' &nbsp;
+              |&nbsp; Directed By : &nbsp; ' .($row['director']) . '
+            </span>
+            <br>
+            <span style="border-bottom: 1px solid white; margin-top:0.5em;">Cast :&nbsp ' .($row['starcast']) . '</span>
+          </p>
+        </div>
+      </div>
+      <div class="body">
+        
+        <div class="container">
+          <div class="text-left">
+            <h3><strong> ' .($row['edtopic']) . '</strong> </h3>
+            <small>Reviewed By : ' .($row['Updated_by']) . '</small>
+          </div>
+        </div>
+        <div class="container text-justify article">
+          '.($row['edarticle']) .'
+        </div>
+      </div>';
+      $hits = $row['hits'];
+      $hits+=1;
+      // echo $hits;
+      mysqli_query($conn,"UPDATE editorial SET hits = $hits WHERE movname = '$movname'");
+      }
+      }
+      else{
+      echo '<img class ="bg img-fluid" src="error.jpg" alt="000xxx">';
+      }
+      ?>
       
     </div>
     
