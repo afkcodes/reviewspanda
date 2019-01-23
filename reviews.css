@@ -8,9 +8,10 @@
   font-family: 'Rajdhani', sans-serif;
   font-size: 17px;
   padding: 2em 5%;
-  background: #16222A;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #3A6073, #16222A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #485461;
+  background-image: -webkit-linear-gradient(bottom right, #485461 0%, #28313b 74%);
+  background-image: -o-linear-gradient(bottom right, #485461 0%, #28313b 74%);
+  background-image: linear-gradient(to top left, #485461 0%, #28313b 74%);
   color: white;
   line-height: 1.5;
 

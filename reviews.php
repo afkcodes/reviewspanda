@@ -16,29 +16,32 @@ echo 'Error Occoured Try Again Later !';
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <?php 
-              $meta = mysqli_query( $conn,"SELECT edtopic,gtags FROM editorial WHERE movname= '$movname'");
-              while ($etags = mysqli_fetch_array($meta)) {   
-                         echo '<title>'.($etags['edtopic']).'</title>
-                               <meta name="keywords" content=" '.($etags['gtags']).'" />
-                               <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />' 
-                         ;}
-     ?>
-     <meta name="google-site-verification" content="dd2pFGUek6PowgIn4VaRLfOjo5NxfUdfKz-ZD110DEk" />
+    <?php
+        $meta = mysqli_query( $conn,"SELECT edtopic,gtags FROM editorial WHERE movname= '$movname'");
+        while ($etags = mysqli_fetch_array($meta)) {
+        echo '<title>'.($etags['edtopic']).'</title>
+        <meta name="keywords" content=" '.($etags['gtags']).'" />
+        <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />'
+    ;}
+    ?>
+    <meta name="google-site-verification" content="dd2pFGUek6PowgIn4VaRLfOjo5NxfUdfKz-ZD110DEk" />
+
+    <!-------------------------STYLES CSS STARTS---------------------------->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="reviews.css">
+    <!------------------------- STYLE CSS ENDS ------------------------->
+
     <link href="https://fonts.googleapis.com/css?family=Antic|Jura|Khand|Rajdhani" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749076-1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'UA-132749076-1');
-        </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749076-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-132749076-1');
+    </script>
   </head>
   <!------------------------------------- BODY----------------------------------- -->
   <body>
@@ -71,7 +74,9 @@ echo 'Error Occoured Try Again Later !';
         </div>
         <div class="container text-justify article">
           '.($row['edarticle']) .'
+
         </div>
+        
       </div>';
       $hits = $row['hits'];
       $hits+=1;

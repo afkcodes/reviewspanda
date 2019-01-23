@@ -47,6 +47,7 @@ require_once 'connection.php';
     </script>
     <!------------------------------ ONE SIGNAL PUSH ENDS ---------------------------->
   </head>
+
   <body>
     <div class="primary-nav">
       <button href="#" class="hamburger open-panel nav-toggle">
