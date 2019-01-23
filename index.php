@@ -8,19 +8,22 @@ require_once 'connection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--------------------------------META TAGS STARTS ---------------------------------->
     <meta name="title" content="ReviewzPanda - Movie Reviews, Redfined Honest Reviews & Ratings " />
-    <meta name="keywords" content=" reviewzpanda, imdb, ratings, movie reviews, movie ratings, rottentomatoes, bollywood movies reviews, public reviews,youtube, avengers, movie analysis,box office collections,movies 2019, movies rating website,web series,tv series, panda, indian movies, hindi movies" />
+    <meta name="keywords" content=" reviewzpanda, imdb, ratings, movie reviews, movie ratings, rottentomatoes, bollywood movies reviews, public reviews,youtube, avengers, movie analysis,box office collections,movies 2019, movies rating website,web series,tv series, panda, indian movies, hindi movies,reviewspanda" />
     <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />
     <meta name="google-site-verification" content="dd2pFGUek6PowgIn4VaRLfOjo5NxfUdfKz-ZD110DEk" />
     <meta name="MobileOptimized" content="width" />
     <meta name="HandheldFriendly" content="true" />
+    <!--------------------------------- META TAGS ENDS------------------------------------>
     <title>ReviewzPanda | Reviews Redefined</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Antic|Jura|Khand|Rajdhani" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics  STARTS-->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749076-1"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -29,6 +32,20 @@ require_once 'connection.php';
 
           gtag('config', 'UA-132749076-1');
         </script>
+    <!-- Global site tag (gtag.js) - Google Analytics ENDS -->
+
+    <!--------------------------- ONESIGNAL PUSH STARTS -------------------------->
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+          OneSignal.init({
+            appId: "03c9fea3-3efd-43ac-a897-39975ab7d092",
+          });
+        });
+    </script>
+    <!------------------------------ ONE SIGNAL PUSH ENDS ---------------------------->
   </head>
   <body>
     <div class="primary-nav">
