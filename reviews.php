@@ -44,9 +44,20 @@ echo 'Error Occoured Try Again Later !';
     </script>
   </head>
   <!------------------------------------- BODY----------------------------------- -->
-  <body>
+    <body>
+  <!-----------------------------FACEBOOK SDK STARTS------------------------------->
+      <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=2193570500904465&autoLogAppEvents=1';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+<!-------------------------------- FACEBOOK SDK ENDS --------------------------------->
     <div class=" container-fluid ">
       <?php
+       $url = $_SERVER['REQUEST_URI'];
       if($countrows = mysqli_num_rows($result) >= 1){
       
       while ($row = mysqli_fetch_array($result)) {
@@ -74,6 +85,9 @@ echo 'Error Occoured Try Again Later !';
         </div>
         <div class="container text-justify article">
           '.($row['edarticle']) .'
+          <hr style="background-color: white;"/>
+          <p>Liked the review? share it with your buddies.</p>
+          <div class="fb-share-button" data-href="'.($url). '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F'.($url). '%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
 
         </div>
         
