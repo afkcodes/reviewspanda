@@ -1,0 +1,11 @@
+<script>
+		function myMap() {
+		  var myCenter = new google.maps.LatLng(23.3441,85.3096);
+		  var mapCanvas = document.getElementById("page_maps");
+		  var mapOptions = {center: myCenter, zoom: 10};
+		  var map = new google.maps.Map(mapCanvas, mapOptions);
+		  var marker = new google.maps.Marker({position:myCenter});
+		  marker.setMap(map);
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYJqW1moTLuJAezlC9Zd4pINRC-CnthDQ&callback=myMap"></script>

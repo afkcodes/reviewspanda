@@ -24,7 +24,7 @@ echo 'Error Occoured Try Again Later !';
         <meta name="keywords" content=" '.($etags['gtags']).'" />
         <meta name="description" content=" Movie Reviews, that  analyze movies without any bias and assess them on its overall impact." />
         <meta property="og:url"           content="'.($url).'" />
-        <meta property="og:image"         content="'.($etags['file_dest']).'" />
+        <meta property="og:image"         content="https://www.reviewzpanda.in/admin/'.($etags['file_dest']).'" />
         '
 
     ;}
@@ -32,6 +32,7 @@ echo 'Error Occoured Try Again Later !';
     <meta name="google-site-verification" content="dd2pFGUek6PowgIn4VaRLfOjo5NxfUdfKz-ZD110DEk" />
 
     <!-------------------------STYLES CSS STARTS---------------------------->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="reviews.css">
@@ -92,7 +93,10 @@ echo 'Error Occoured Try Again Later !';
           '.($row['edarticle']) .'
           <hr style="background-color: white;"/>
           <p>Liked the review? share it with your buddies.</p>
-          <div class="fb-share-button" data-href="'.($url). '" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F'.($url). '%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div><br/>
+          <div class="fb-share-button" 
+              data-href="'.($url).'" 
+              data-layout="button_count">
+          </div>
 
         </div>
         

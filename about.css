@@ -1,0 +1,50 @@
+*{
+    font-family: 'Abel', sans-serif;
+}
+
+.top{
+	margin-top: 15px;
+}
+.map{
+	margin-top:-15px;
+	padding: 0;
+}
+
+.desc{
+	font-size: 19px;
+	background: #33313b;
+	color: white;
+	padding-bottom: 18px;
+}
+
+
+.contact{
+	margin-top:-15px;
+	background: #33313b;
+	color: white;
+	 padding-bottom: 15px;
+
+}
+
+textarea{
+	 outline: none;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.contact-btn{
+color: white;
+border:1px solid white;
+}
+.contact-btn:hover{
+background: #FF416C;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border:1px solid white;
+}
+
+h2{
+	font-weight: bold;
+}
