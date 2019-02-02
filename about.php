@@ -25,11 +25,15 @@
 		<!-- Global site tag (gtag.js) - Google Analytics  STARTS-->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749076-1"></script>
 		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'UA-132749076-1');
-		</script>
+       if (document.location.hostname == 'localhost') {
+            console.log('Reviewzpanda Loves You');
+        }else {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-132749076-1');
+          }
+    </script>
 		<!----------- Global site tag (gtag.js) - Google Analytics ENDS -------------->
 	</head>
 	<body>
